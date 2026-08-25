@@ -1,0 +1,224 @@
+[gd_scene format=3 uid="uid://bqnnca7dj7cnt"]
+
+[ext_resource type="Script" uid="uid://d33fgr8n3p4nx" path="res://baldniko/codiko/baldniko.gd" id="1_2xdg6"]
+[ext_resource type="Texture2D" uid="uid://huiyyvejl1r7" path="res://baldniko/nikene/balder.png" id="1_7wvly"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rpb1b"]
+radius = 226.43321
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7xrwy"]
+radius = 203.08865
+
+[node name="baldniko" type="Node2D" unique_id=683664804]
+
+[node name="baldniko" type="CharacterBody2D" parent="." unique_id=314767008]
+position = Vector2(567, 272)
+script = ExtResource("1_2xdg6")
+
+[node name="Head" type="Node2D" parent="baldniko" unique_id=1170764748]
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/Head" unique_id=1758477795]
+z_index = 1
+position = Vector2(-11, -245)
+rotation = 3.1415927
+texture = ExtResource("1_7wvly")
+
+[node name="legs" type="Node2D" parent="baldniko" unique_id=1717835312]
+
+[node name="first" type="Node2D" parent="baldniko/legs" unique_id=1713083767]
+
+[node name="first" type="Node2D" parent="baldniko/legs/first" unique_id=1365656624]
+position = Vector2(71, -7)
+rotation = 0.29275277
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/first/first" unique_id=710629540]
+position = Vector2(168.00002, -5)
+rotation = -1.5832834
+scale = Vector2(0.16757196, 0.6315279)
+texture = ExtResource("1_7wvly")
+
+[node name="first" type="Node2D" parent="baldniko/legs/first/first" unique_id=246925130]
+position = Vector2(140.00002, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/first/first/first" unique_id=1102885511]
+position = Vector2(72.99997, 0)
+rotation = -1.5853928
+scale = Vector2(0.05943896, 0.279477)
+texture = ExtResource("1_7wvly")
+
+[node name="second" type="Node2D" parent="baldniko/legs" unique_id=588658696]
+
+[node name="second" type="Node2D" parent="baldniko/legs/second" unique_id=870073208]
+position = Vector2(76, -61)
+rotation = 0.29275277
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/second/second" unique_id=220882830]
+position = Vector2(168.00002, -5)
+rotation = -1.5832834
+scale = Vector2(0.16757196, 0.6315279)
+texture = ExtResource("1_7wvly")
+
+[node name="second" type="Node2D" parent="baldniko/legs/second/second" unique_id=887202615]
+position = Vector2(140.00002, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/second/second/second" unique_id=446088077]
+position = Vector2(72.99997, 0)
+rotation = -1.5853928
+scale = Vector2(0.05943896, 0.279477)
+texture = ExtResource("1_7wvly")
+
+[node name="third" type="Node2D" parent="baldniko/legs" unique_id=417884276]
+
+[node name="third" type="Node2D" parent="baldniko/legs/third" unique_id=998694132]
+position = Vector2(67, -102)
+rotation = 0.29275277
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/third/third" unique_id=420853021]
+position = Vector2(168.00002, -5)
+rotation = -1.5832834
+scale = Vector2(0.16757196, 0.6315279)
+texture = ExtResource("1_7wvly")
+
+[node name="first" type="Node2D" parent="baldniko/legs/third/third" unique_id=1589890487]
+position = Vector2(140.00002, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/third/third/first" unique_id=1789946349]
+position = Vector2(72.99997, 0)
+rotation = -1.5853928
+scale = Vector2(0.05943896, 0.279477)
+texture = ExtResource("1_7wvly")
+
+[node name="fourth" type="Node2D" parent="baldniko/legs" unique_id=1852949284]
+
+[node name="fourth" type="Node2D" parent="baldniko/legs/fourth" unique_id=1956940399]
+position = Vector2(54, -147)
+rotation = 0.29275277
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/fourth/fourth" unique_id=439993710]
+position = Vector2(168.00002, -5)
+rotation = -1.5832834
+scale = Vector2(0.16757196, 0.6315279)
+texture = ExtResource("1_7wvly")
+
+[node name="first" type="Node2D" parent="baldniko/legs/fourth/fourth" unique_id=173016368]
+position = Vector2(140.00002, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/fourth/fourth/first" unique_id=1359636148]
+position = Vector2(72.99997, 0)
+rotation = -1.5853928
+scale = Vector2(0.05943896, 0.279477)
+texture = ExtResource("1_7wvly")
+
+[node name="fifth" type="Node2D" parent="baldniko/legs" unique_id=151992805]
+
+[node name="fifth" type="Node2D" parent="baldniko/legs/fifth" unique_id=463287797]
+position = Vector2(-81, -10.999996)
+rotation = 2.8611753
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/fifth/fifth" unique_id=1087299068]
+position = Vector2(168.00002, -5)
+rotation = -1.5832834
+scale = Vector2(0.16757196, 0.6315279)
+texture = ExtResource("1_7wvly")
+
+[node name="first" type="Node2D" parent="baldniko/legs/fifth/fifth" unique_id=840165192]
+position = Vector2(140.00002, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/fifth/fifth/first" unique_id=494958998]
+position = Vector2(72.99997, 0)
+rotation = -1.5853928
+scale = Vector2(0.05943896, 0.279477)
+texture = ExtResource("1_7wvly")
+
+[node name="sixth" type="Node2D" parent="baldniko/legs" unique_id=370878549]
+
+[node name="sixth" type="Node2D" parent="baldniko/legs/sixth" unique_id=1490552060]
+position = Vector2(-85, -56)
+rotation = 2.8611753
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/sixth/sixth" unique_id=1254981092]
+position = Vector2(168.00002, -5)
+rotation = -1.5832834
+scale = Vector2(0.16757196, 0.6315279)
+texture = ExtResource("1_7wvly")
+
+[node name="first" type="Node2D" parent="baldniko/legs/sixth/sixth" unique_id=2007496977]
+position = Vector2(140.00002, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/sixth/sixth/first" unique_id=287347591]
+position = Vector2(72.99997, 0)
+rotation = -1.5853928
+scale = Vector2(0.05943896, 0.279477)
+texture = ExtResource("1_7wvly")
+
+[node name="seventh" type="Node2D" parent="baldniko/legs" unique_id=1361478206]
+
+[node name="seventh" type="Node2D" parent="baldniko/legs/seventh" unique_id=225120693]
+position = Vector2(-78, -107)
+rotation = 2.8611753
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/seventh/seventh" unique_id=407807972]
+position = Vector2(168.00002, -5)
+rotation = -1.5832834
+scale = Vector2(0.16757196, 0.6315279)
+texture = ExtResource("1_7wvly")
+
+[node name="first" type="Node2D" parent="baldniko/legs/seventh/seventh" unique_id=1066369059]
+position = Vector2(140.00002, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/seventh/seventh/first" unique_id=2012981602]
+position = Vector2(72.99997, 0)
+rotation = -1.5853928
+scale = Vector2(0.05943896, 0.279477)
+texture = ExtResource("1_7wvly")
+
+[node name="eighth" type="Node2D" parent="baldniko/legs" unique_id=432079168]
+
+[node name="eighth" type="Node2D" parent="baldniko/legs/eighth" unique_id=4339310]
+position = Vector2(-69, -152)
+rotation = 2.8611753
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/eighth/eighth" unique_id=136510278]
+position = Vector2(168.00002, -5)
+rotation = -1.5832834
+scale = Vector2(0.16757196, 0.6315279)
+texture = ExtResource("1_7wvly")
+
+[node name="first" type="Node2D" parent="baldniko/legs/eighth/eighth" unique_id=983731547]
+position = Vector2(140.00002, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/legs/eighth/eighth/first" unique_id=1103579019]
+position = Vector2(72.99997, 0)
+rotation = -1.5853928
+scale = Vector2(0.05943896, 0.279477)
+texture = ExtResource("1_7wvly")
+
+[node name="webshooter" type="Node2D" parent="baldniko" unique_id=1733592231]
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/webshooter" unique_id=671474585]
+position = Vector2(-12, -47)
+rotation = 3.1415927
+scale = Vector2(1.655, 0.88)
+texture = ExtResource("1_7wvly")
+
+[node name="Sprite2D2" type="Sprite2D" parent="baldniko/webshooter" unique_id=1825253461]
+position = Vector2(9.536743e-07, 234)
+scale = Vector2(0.14355469, 0.10546875)
+texture = ExtResource("1_7wvly")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="baldniko/webshooter" unique_id=1418717301]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="baldniko/webshooter/CharacterBody2D" unique_id=1263718199]
+position = Vector2(2, 217)
+shape = SubResource("CircleShape2D_rpb1b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="baldniko" unique_id=1786507565]
+shape = SubResource("CircleShape2D_7xrwy")
+
+[node name="Camera2D" type="Camera2D" parent="baldniko" unique_id=119476806]
+ignore_rotation = false
+zoom = Vector2(0.475, 0.475)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
