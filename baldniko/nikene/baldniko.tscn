@@ -2,12 +2,17 @@
 
 [ext_resource type="Script" uid="uid://d33fgr8n3p4nx" path="res://baldniko/codiko/baldniko.gd" id="1_2xdg6"]
 [ext_resource type="Texture2D" uid="uid://huiyyvejl1r7" path="res://baldniko/nikene/balder.png" id="1_7wvly"]
+[ext_resource type="Texture2D" uid="uid://4px8n0xskrrc" path="res://icon.svg" id="3_dj42c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rpb1b"]
-radius = 226.43321
+radius = 11.045361
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7xrwy"]
-radius = 203.08865
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dj42c"]
+radius = 153.0
+height = 604.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5m13b"]
+radius = 149.0
 
 [node name="baldniko" type="Node2D" unique_id=683664804]
 
@@ -207,6 +212,7 @@ scale = Vector2(0.14355469, 0.10546875)
 texture = ExtResource("1_7wvly")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="baldniko/webshooter" unique_id=1418717301]
+position = Vector2(-10, 0)
 collision_layer = 2
 collision_mask = 2
 
@@ -214,11 +220,66 @@ collision_mask = 2
 position = Vector2(2, 217)
 shape = SubResource("CircleShape2D_rpb1b")
 
+[node name="Balder" type="Sprite2D" parent="baldniko/webshooter/CharacterBody2D" unique_id=1497057909]
+visible = false
+position = Vector2(1, 483)
+texture = ExtResource("1_7wvly")
+
+[node name="Node2D" type="Node2D" parent="baldniko/webshooter" unique_id=1633749334]
+position = Vector2(-1, 207)
+
+[node name="Sprite2D" type="Sprite2D" parent="baldniko/webshooter/Node2D" unique_id=1435786971]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(0, 0.75)
+scale = Vector2(0.1484375, 0.011718757)
+texture = ExtResource("3_dj42c")
+
+[node name="Node2D" type="Node2D" parent="baldniko/webshooter/Node2D/Sprite2D" unique_id=433253091]
+position = Vector2(0, 63.72)
+
+[node name="Node2D2" type="Node2D" parent="baldniko/webshooter" unique_id=964477114]
+position = Vector2(-1, 209)
+
+[node name="Node2D" type="Node2D" parent="baldniko/webshooter/Node2D2" unique_id=1906535555]
+position = Vector2(0, -289)
+
+[node name="Balder" type="Sprite2D" parent="baldniko/webshooter/Node2D2/Node2D" unique_id=1544261260]
+visible = false
+position = Vector2(2, 172)
+texture = ExtResource("1_7wvly")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="baldniko" unique_id=1786507565]
-shape = SubResource("CircleShape2D_7xrwy")
+position = Vector2(-10, -99)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_dj42c")
 
 [node name="Camera2D" type="Camera2D" parent="baldniko" unique_id=119476806]
 ignore_rotation = false
-zoom = Vector2(0.475, 0.475)
+zoom = Vector2(0.49, 0.49)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="baldniko" unique_id=1545922160]
+position = Vector2(0, 68)
+rotation = -1.5707964
+shape = SubResource("CircleShape2D_5m13b")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="baldniko" unique_id=328361449]
+position = Vector2(-162, 22)
+rotation = -1.5707964
+shape = SubResource("CircleShape2D_5m13b")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="baldniko" unique_id=1396394326]
+position = Vector2(134, 9)
+rotation = -1.5707964
+shape = SubResource("CircleShape2D_5m13b")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="baldniko" unique_id=1790536509]
+position = Vector2(-157, -145)
+rotation = -1.5707964
+shape = SubResource("CircleShape2D_5m13b")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="baldniko" unique_id=1298657937]
+position = Vector2(132, -152)
+rotation = -1.5707964
+shape = SubResource("CircleShape2D_5m13b")

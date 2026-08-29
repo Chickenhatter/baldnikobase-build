@@ -1,44 +1,61 @@
 extends CharacterBody2D
-
+var webshoot = false
+var lunge = false
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-
+func _ready() -> void:
+	legr(0)
+	legl(0)
 
 func _physics_process(delta: float) -> void:
 	
 	
-	
 	var movement = Vector2.ZERO
-	if Input.is_action_pressed('ui_a'):
-		$".".rotation_degrees -= 2
-		legr(delta*0.5)
-		legl(-delta*0.5)
-	if Input.is_action_pressed('ui_d'):
-		$".".rotation_degrees += 2
-		legr(-delta*0.5)
-		legl(delta*0.5)
-	if Input.is_action_pressed('ui_w'):
-		legr(delta)
-		legl(delta)
-		movement = Vector2.UP.rotated(deg_to_rad(rotation_degrees))
-	if Input.is_action_pressed('ui_s'):
-		legr(-delta)
-		legl(-delta)
-		movement = Vector2.DOWN.rotated(deg_to_rad(rotation_degrees))
-	
+	if webshoot == false:
+		if Input.is_action_pressed('ui_a'):
+			$".".rotation_degrees -= 2
+			legr(delta*0.5)
+			legl(-delta*0.5)
+		if Input.is_action_pressed('ui_d'):
+			$".".rotation_degrees += 2
+			legr(-delta*0.5)
+			legl(delta*0.5)
+		if Input.is_action_pressed('ui_w'):
+			legr(delta)
+			legl(delta)
+			movement = Vector2.UP.rotated(deg_to_rad(rotation_degrees))
+		if Input.is_action_pressed('ui_s'):
+			legr(-delta)
+			legl(-delta)
+			movement = Vector2.DOWN.rotated(deg_to_rad(rotation_degrees))
+	if webshoot == true:
+		$webshooter/CharacterBody2D.global_position = $webshooter/Node2D2/Node2D.global_position
+		$webshooter/Node2D.scale.y += 15
+		$webshooter/Node2D2.global_position = $webshooter/Node2D/Sprite2D/Node2D.global_position
+		#var lololo = Vector2.ZERO
+		#lololo = Vector2.DOWN.rotated(deg_to_rad(rotation_degrees))
+		#
+		#$webshooter/CharacterBody2D.velocity = lololo * 1500
+		#
+		$webshooter/CharacterBody2D.move_and_slide()
+		if ($webshooter/CharacterBody2D.is_on_wall()) or ($webshooter/CharacterBody2D.is_on_floor()) or ($webshooter/CharacterBody2D.is_on_ceiling()):
+			var tween = create_tween()
+			tween.tween_property(self, "global_position", $webshooter/CharacterBody2D.global_position, 1.0)
+			var heen = create_tween()
+			heen.tween_property($webshooter/Node2D, "scale:y", 0.012, 1.0)
+			$webshooter/CharacterBody2D.global_position = $webshooter/Sprite2D2.global_position
+			webshoot = false
 	velocity = movement * 300
+	
+	if Input.is_action_pressed('ui_t'):
+		webshoot = true
 	move_and_slide()
 	
 	
 	
 	
 	
-	
-	
-	move_and_slide()
-
-
 
 
 
