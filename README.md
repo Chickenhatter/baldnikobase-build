@@ -11,6 +11,6 @@
   Pressing T shoots web out of his balikospinneret and when attached to wall will move niko to the wall
 </p>
 <p>
-  
+  game at https://chickenhatter.itch.io/nikospider-testing
 </p>
 <img src="https://github.com/Chickenhatter/baldnikobase-build/blob/main/Screenshot%20From%202026-08-29%2019-19-05.png">
